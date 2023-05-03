@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cmpsc475FinProj</string>
+    <string name="action_add">action_add</string>
+    <string name="action_tracker">action_tracker</string>
+    <string name="action_delete">action_delete</string>
+    <string name="action_settings">Settings</string>
+</resources>

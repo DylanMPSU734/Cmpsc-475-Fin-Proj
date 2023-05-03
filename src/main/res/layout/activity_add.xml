@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <EditText
+        android:id="@+id/newCharName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <Button
+        android:id="@+id/add_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/physCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="32dp"
+        android:text="Physical Condition Track"
+        app:layout_constraintStart_toStartOf="@+id/newCharName"
+        app:layout_constraintTop_toBottomOf="@+id/newCharName" />
+
+    <TextView
+        android:id="@+id/stunCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Stun Condition Track"
+        app:layout_constraintStart_toStartOf="@+id/physCond"
+        app:layout_constraintTop_toBottomOf="@+id/physNum" />
+
+    <EditText
+        android:id="@+id/physNum"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="9"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintStart_toStartOf="@+id/physCond"
+        app:layout_constraintTop_toBottomOf="@+id/physCond" />
+
+    <EditText
+        android:id="@+id/stunNum"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="9"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintStart_toStartOf="@+id/stunCond"
+        app:layout_constraintTop_toBottomOf="@+id/stunCond" />
+
+    <TextView
+        android:id="@+id/Initiative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Initiative"
+        app:layout_constraintStart_toStartOf="@+id/defNum"
+        app:layout_constraintTop_toBottomOf="@+id/defNum" />
+
+    <EditText
+        android:id="@+id/initDice"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="1"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/Initiative"
+        app:layout_constraintTop_toBottomOf="@+id/Initiative" />
+
+
+    <EditText
+        android:id="@+id/initMod"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="6"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/d6"
+        app:layout_constraintTop_toTopOf="@+id/initDice" />
+
+    <TextView
+        android:id="@+id/d6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d6 +"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/initDice"
+        app:layout_constraintStart_toEndOf="@+id/initDice"
+        app:layout_constraintTop_toTopOf="@+id/initDice"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <TextView
+        android:id="@+id/armor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Armor"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/defense" />
+
+    <TextView
+        android:id="@+id/defense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Defense"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/newCharName" />
+
+    <EditText
+        android:id="@+id/defNum"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="6"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/defense"
+        app:layout_constraintTop_toBottomOf="@+id/defense" />
+
+    <EditText
+        android:id="@+id/armorNum"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="12"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/armor" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
